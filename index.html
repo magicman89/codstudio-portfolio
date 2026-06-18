@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cape Cod Web & Lead Gen — AI-Powered Marketing for Local Businesses</title>
+<meta name="description" content="Cape Cod's AI marketing studio. Free audit for local businesses. Lead gen, websites, Google Business Profile, social — done in days, not months." />
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-soft: #11192a;
+    --fg: #e8eefc;
+    --muted: #93a4c4;
+    --accent: #00d4a8;
+    --accent-2: #ffd166;
+    --danger: #ff6b6b;
+    --border: #1f2a3d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 32px 24px; }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    color: var(--accent);
+  }
+  .logo span { color: var(--fg); }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 14px;
+  }
+  nav a:hover { color: var(--fg); }
+  .hero { padding: 64px 0 48px; }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 56px;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--accent); }
+  .lede {
+    font-size: 20px;
+    color: var(--muted);
+    max-width: 720px;
+    margin-bottom: 32px;
+  }
+  .cta {
+    display: inline-block;
+    background: var(--accent);
+    color: #001a14;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: transform 0.1s;
+  }
+  .cta:hover { transform: translateY(-1px); }
+  .cta-ghost {
+    display: inline-block;
+    color: var(--fg);
+    padding: 16px 24px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 12px;
+  }
+  .section { padding: 48px 0; border-top: 1px solid var(--border); }
+  h2 {
+    font-size: 32px;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  h2 .accent { color: var(--accent); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--fg);
+  }
+  .card p { color: var(--muted); font-size: 14px; }
+  .price { color: var(--accent-2); font-weight: 700; font-size: 14px; margin-top: 12px; display: block; }
+  .case {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .case .num {
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .case h3 { font-size: 20px; margin-bottom: 8px; }
+  .case .before, .case .after {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  .case .after { color: var(--accent); }
+  form {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+  }
+  label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; margin-top: 16px; }
+  label:first-of-type { margin-top: 0; }
+  input, select, textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    color: var(--fg);
+    font-size: 15px;
+    font-family: inherit;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  textarea { min-height: 100px; resize: vertical; }
+  button {
+    background: var(--accent);
+    color: #001a14;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 16px;
+  }
+  button:hover { opacity: 0.9; }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+    margin-top: 64px;
+  }
+  .pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(0, 212, 168, 0.1);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 40px; }
+    h2 { font-size: 24px; }
+    .lede { font-size: 16px; }
+    nav a { margin-left: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">cod<span>//</span>studio</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#audit">Free Audit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Cape Cod · Osterville · Barnstable · Falmouth</div>
+    <h1>Local businesses <span class="accent">lose leads every day</span> to a weak web presence. I fix that in days, not months.</h1>
+    <p class="lede">AI-powered lead gen, Google Business Profile optimization, and high-converting websites for Cape Cod small businesses. Real numbers, fast turnaround, no long contracts.</p>
+    <a href="#audit" class="cta">Claim Your Free 30-min Audit →</a>
+    <a href="#work" class="cta-ghost">See What I've Built</a>
+  </section>
+
+  <section class="section" id="services">
+    <h2>What I do <span class="accent">this week</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Google Business Profile Rescue</h3>
+        <p>Unclaimed, incomplete, or underperforming GMB. I claim it, fill it out properly with photos and posts, and start showing up in the local 3-pack within days.</p>
+        <span class="price">$497 · 3-day turnaround</span>
+      </div>
+      <div class="card">
+        <h3>Lead-Gen Landing Page</h3>
+        <p>One page built to convert. Mobile-first, fast, with a working contact form and CRM handoff. Designed around your actual customers, not a template.</p>
+        <span class="price">$697 · 5-day turnaround</span>
+      </div>
+      <div class="card">
+        <h3>5-Star Review Sprint</h3>
+        <p>Build a 4.5+ star average on Google in 30 days. SMS follow-up sequences to happy customers, response templates for the bad ones, full review-monitoring dashboard.</p>
+        <span class="price">$797 · 30-day sprint</span>
+      </div>
+      <div class="card">
+        <h3>AI Content Engine</h3>
+        <p>12 social posts + 4 blog posts/month, written by AI and edited by me. Topics pulled from what your customers actually search. Posted to your channels on schedule.</p>
+        <span class="price">$497/mo · 90-day minimum</span>
+      </div>
+      <div class="card">
+        <h3>Site Rescue / Rebuild</h3>
+        <p>Old site, broken mobile, slow, no leads? I rebuild it fast with a modern stack, proper SEO, and a working lead form. You see it in 7 days.</p>
+        <span class="price">From $1,497 · 7-day turnaround</span>
+      </div>
+      <div class="card">
+        <h3>Custom Bundle</h3>
+        <p>Need more than one of the above? I bundle for less. Real estate, vacation rentals, restaurants, marine, contractors — all my specialty.</p>
+        <span class="price">Custom · 1-2 wk turnaround</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <h2>How I work <span class="accent">(and what that means for you)</span></h2>
+    <div class="case">
+      <span class="num">// The Process</span>
+      <h3>From "I think I need a new site" to "leads coming in" — 5 steps, one week</h3>
+      <p class="before">→ Day 1: I audit your current web presence (free, 30 min, no obligation).</p>
+      <p class="after">→ Day 1: You see exactly where you're losing leads and what to do about it.</p>
+      <p class="before">→ Day 2-3: I deliver a 1-page plan with the 3 things that will move the needle.</p>
+      <p class="after">→ You pick the package. I start the same day.</p>
+      <p class="before">→ Day 4-7: I build, ship, and you review.</p>
+      <p class="after">→ Day 8+: You're generating leads from a system that runs without you.</p>
+    </div>
+    <div class="case">
+      <span class="num">// Specialties</span>
+      <h3>Cape Cod categories I work best with</h3>
+      <p>
+        <span class="pill">Real estate agents</span>
+        <span class="pill">Vacation rental mgmt</span>
+        <span class="pill">Wedding venues</span>
+        <span class="pill">Marine / yacht</span>
+        <span class="pill">High-end restaurants</span>
+        <span class="pill">Boutique fitness</span>
+        <span class="pill">Independent contractors</span>
+      </p>
+      <p style="margin-top: 12px; color: var(--muted);">If your business relies on a Google search to bring in customers and your web presence isn't doing it, I'm your guy.</p>
+    </div>
+    <div class="case">
+      <span class="num">// What I'm NOT</span>
+      <h3>No 6-month retainers. No $50k projects. No jargon.</h3>
+      <p style="color: var(--muted);">I'm a one-person AI studio, not an agency. You work with me directly. I ship fast, charge fair, and tell you when something isn't worth doing. I won't take your money if I don't think I can move the needle.</p>
+    </div>
+  </section>
+
+  <section class="section" id="audit">
+    <h2>Free 30-min audit <span class="accent">— yours, no pitch</span></h2>
+    <p style="color: var(--muted); margin-bottom: 16px;">I'll review your current web presence, Google Business Profile, and 3 competitors. You get a 1-page PDF with the 3 highest-ROI moves you can make. No obligation, no follow-up sales call. Just the audit.</p>
+    <form id="contact" action="mailto:hello@codstudio.example" method="post" enctype="text/plain">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required />
+      <label for="business">Business name</label>
+      <input type="text" id="business" name="business" required />
+      <label for="url">Website (or "none")</label>
+      <input type="text" id="url" name="url" />
+      <label for="cat">Category</label>
+      <select id="cat" name="category">
+        <option>Real estate</option>
+        <option>Vacation rental / property mgmt</option>
+        <option>Wedding venue / event space</option>
+        <option>Marine / yacht</option>
+        <option>Restaurant</option>
+        <option>Other Cape Cod business</option>
+      </select>
+      <label for="msg">Anything I should know?</label>
+      <textarea id="msg" name="message" placeholder="e.g., 'My site is from 2017, I have no idea what to do, just want more leads.'"></textarea>
+      <button type="submit">Send — I'll get back within 24h</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>cod//studio · Osterville, MA · Built weekend of June 18, 2026</p>
+    <p style="margin-top: 8px; color: #5a6a85;">Cape Cod small business marketing · AI-assisted · Local · 1-2 wk turnaround</p>
+  </footer>
+</div>
+</body>
+</html>
